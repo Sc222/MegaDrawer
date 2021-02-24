@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -42,11 +42,10 @@
             this.labelX1 = new System.Windows.Forms.Label();
             this.buttonEraseLine = new System.Windows.Forms.Button();
             this.buttonDrawLine = new System.Windows.Forms.Button();
-            this.buttonGraphics = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelDrawCanvas = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBoxCircleRadius = new System.Windows.Forms.TextBox();
             this.textBoxCircleY = new System.Windows.Forms.TextBox();
@@ -101,7 +100,6 @@
             this.groupBox1.Controls.Add(this.labelX1);
             this.groupBox1.Controls.Add(this.buttonEraseLine);
             this.groupBox1.Controls.Add(this.buttonDrawLine);
-            this.groupBox1.Controls.Add(this.buttonGraphics);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(14, 12);
             this.groupBox1.Name = "groupBox1";
@@ -192,37 +190,23 @@
             // 
             // buttonEraseLine
             // 
-            this.buttonEraseLine.Enabled = false;
             this.buttonEraseLine.Location = new System.Drawing.Point(124, 42);
             this.buttonEraseLine.Name = "buttonEraseLine";
             this.buttonEraseLine.Size = new System.Drawing.Size(93, 38);
             this.buttonEraseLine.TabIndex = 4;
             this.buttonEraseLine.Text = "стереть";
             this.buttonEraseLine.UseVisualStyleBackColor = true;
-            this.buttonEraseLine.Visible = false;
             this.buttonEraseLine.Click += new System.EventHandler(this.buttonEraseLine_Click);
             // 
             // buttonDrawLine
             // 
-            this.buttonDrawLine.Enabled = false;
-            this.buttonDrawLine.Location = new System.Drawing.Point(18, 42);
+            this.buttonDrawLine.Location = new System.Drawing.Point(17, 42);
             this.buttonDrawLine.Name = "buttonDrawLine";
             this.buttonDrawLine.Size = new System.Drawing.Size(100, 38);
             this.buttonDrawLine.TabIndex = 3;
             this.buttonDrawLine.Text = "рисовать";
             this.buttonDrawLine.UseVisualStyleBackColor = true;
-            this.buttonDrawLine.Visible = false;
             this.buttonDrawLine.Click += new System.EventHandler(this.buttonDrawLine_Click);
-            // 
-            // buttonGraphics
-            // 
-            this.buttonGraphics.Location = new System.Drawing.Point(18, 42);
-            this.buttonGraphics.Name = "buttonGraphics";
-            this.buttonGraphics.Size = new System.Drawing.Size(175, 38);
-            this.buttonGraphics.TabIndex = 2;
-            this.buttonGraphics.Text = "вкл графику";
-            this.buttonGraphics.UseVisualStyleBackColor = true;
-            this.buttonGraphics.Click += new System.EventHandler(this.buttonGraphics_Click);
             // 
             // groupBox2
             // 
@@ -243,7 +227,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.panel1);
+            this.groupBox4.Controls.Add(this.panelDrawCanvas);
             this.groupBox4.Location = new System.Drawing.Point(702, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(424, 358);
@@ -251,13 +235,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Вывод";
             // 
-            // panel1
+            // panelDrawCanvas
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(6, 25);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(447, 319);
-            this.panel1.TabIndex = 0;
+            this.panelDrawCanvas.BackColor = System.Drawing.Color.White;
+            this.panelDrawCanvas.Location = new System.Drawing.Point(6, 25);
+            this.panelDrawCanvas.Name = "panelDrawCanvas";
+            this.panelDrawCanvas.Size = new System.Drawing.Size(447, 319);
+            this.panelDrawCanvas.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -327,26 +311,22 @@
             // 
             // buttonEraseCircle
             // 
-            this.buttonEraseCircle.Enabled = false;
             this.buttonEraseCircle.Location = new System.Drawing.Point(114, 42);
             this.buttonEraseCircle.Name = "buttonEraseCircle";
             this.buttonEraseCircle.Size = new System.Drawing.Size(86, 38);
             this.buttonEraseCircle.TabIndex = 4;
             this.buttonEraseCircle.Text = "стереть";
             this.buttonEraseCircle.UseVisualStyleBackColor = true;
-            this.buttonEraseCircle.Visible = false;
             this.buttonEraseCircle.Click += new System.EventHandler(this.buttonEraseCircle_Click);
             // 
             // buttonDrawCircle
             // 
-            this.buttonDrawCircle.Enabled = false;
             this.buttonDrawCircle.Location = new System.Drawing.Point(9, 42);
             this.buttonDrawCircle.Name = "buttonDrawCircle";
             this.buttonDrawCircle.Size = new System.Drawing.Size(99, 38);
             this.buttonDrawCircle.TabIndex = 3;
             this.buttonDrawCircle.Text = "рисовать";
             this.buttonDrawCircle.UseVisualStyleBackColor = true;
-            this.buttonDrawCircle.Visible = false;
             this.buttonDrawCircle.Click += new System.EventHandler(this.buttonDrawCircle_Click);
             // 
             // groupBox6
@@ -453,26 +433,22 @@
             // 
             // buttonErasePolygon
             // 
-            this.buttonErasePolygon.Enabled = false;
             this.buttonErasePolygon.Location = new System.Drawing.Point(123, 42);
             this.buttonErasePolygon.Name = "buttonErasePolygon";
             this.buttonErasePolygon.Size = new System.Drawing.Size(101, 38);
             this.buttonErasePolygon.TabIndex = 4;
             this.buttonErasePolygon.Text = "стереть";
             this.buttonErasePolygon.UseVisualStyleBackColor = true;
-            this.buttonErasePolygon.Visible = false;
             this.buttonErasePolygon.Click += new System.EventHandler(this.buttonErasePolygon_Click);
             // 
             // buttonDrawPolygon
             // 
-            this.buttonDrawPolygon.Enabled = false;
             this.buttonDrawPolygon.Location = new System.Drawing.Point(18, 42);
             this.buttonDrawPolygon.Name = "buttonDrawPolygon";
             this.buttonDrawPolygon.Size = new System.Drawing.Size(99, 38);
             this.buttonDrawPolygon.TabIndex = 3;
             this.buttonDrawPolygon.Text = "рисовать";
             this.buttonDrawPolygon.UseVisualStyleBackColor = true;
-            this.buttonDrawPolygon.Visible = false;
             this.buttonDrawPolygon.Click += new System.EventHandler(this.buttonDrawPolygon_Click);
             // 
             // groupBox8
@@ -568,29 +544,25 @@
             // 
             // buttonEraseRegularPolygon
             // 
-            this.buttonEraseRegularPolygon.Enabled = false;
             this.buttonEraseRegularPolygon.Location = new System.Drawing.Point(112, 42);
             this.buttonEraseRegularPolygon.Name = "buttonEraseRegularPolygon";
             this.buttonEraseRegularPolygon.Size = new System.Drawing.Size(91, 38);
             this.buttonEraseRegularPolygon.TabIndex = 4;
             this.buttonEraseRegularPolygon.Text = "стереть";
             this.buttonEraseRegularPolygon.UseVisualStyleBackColor = true;
-            this.buttonEraseRegularPolygon.Visible = false;
             this.buttonEraseRegularPolygon.Click += new System.EventHandler(this.buttonEraseRegularPolygon_Click);
             // 
             // buttonDrawRegularPolygon
             // 
-            this.buttonDrawRegularPolygon.Enabled = false;
             this.buttonDrawRegularPolygon.Location = new System.Drawing.Point(6, 42);
             this.buttonDrawRegularPolygon.Name = "buttonDrawRegularPolygon";
             this.buttonDrawRegularPolygon.Size = new System.Drawing.Size(100, 38);
             this.buttonDrawRegularPolygon.TabIndex = 3;
             this.buttonDrawRegularPolygon.Text = "рисовать";
             this.buttonDrawRegularPolygon.UseVisualStyleBackColor = true;
-            this.buttonDrawRegularPolygon.Visible = false;
             this.buttonDrawRegularPolygon.Click += new System.EventHandler(this.buttonDrawRegularPolygon_Click);
             // 
-            // Form1
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -603,7 +575,8 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Location = new System.Drawing.Point(15, 15);
-            this.Name = "Form1";
+            this.Name = "FormMain";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -668,13 +641,12 @@
         private System.Windows.Forms.TextBox textBoxY1;
         private System.Windows.Forms.TextBox textBoxY2;
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelDrawCanvas;
 
         private System.Windows.Forms.Button buttonEraseLine;
 
         private System.Windows.Forms.Button buttonDrawLine;
 
-        private System.Windows.Forms.Button buttonGraphics;
         private System.Windows.Forms.GroupBox groupBox4;
 
         private System.Windows.Forms.GroupBox groupBox3;

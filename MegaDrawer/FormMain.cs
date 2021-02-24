@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
         private Graphics g;
 
@@ -40,36 +40,14 @@ namespace WindowsFormsApp2
         private readonly Stack<RegularPolygonDrawer> regularPolygonDrawers = new Stack<RegularPolygonDrawer>();
         //todo update all canvas method private List<IDrawer> drawers = new List<IDrawer>();
 
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
         }
-
-        private void buttonGraphics_Click(object sender, EventArgs e)
+        
+        private void FormMain_Load(object sender, EventArgs e)
         {
-            g = panel1.CreateGraphics();
-            buttonGraphics.Enabled = false;
-            buttonGraphics.Visible = false;
-
-            buttonDrawLine.Enabled = true;
-            buttonDrawLine.Visible = true;
-            buttonEraseLine.Enabled = true;
-            buttonEraseLine.Visible = true;
-
-            buttonDrawCircle.Enabled = true;
-            buttonDrawCircle.Visible = true;
-            buttonEraseCircle.Enabled = true;
-            buttonEraseCircle.Visible = true;
-
-            buttonDrawPolygon.Enabled = true;
-            buttonDrawPolygon.Visible = true;
-            buttonErasePolygon.Enabled = true;
-            buttonErasePolygon.Visible = true;
-
-            buttonDrawRegularPolygon.Enabled = true;
-            buttonDrawRegularPolygon.Visible = true;
-            buttonEraseRegularPolygon.Enabled = true;
-            buttonEraseRegularPolygon.Visible = true;
+            g = panelDrawCanvas.CreateGraphics();
         }
 
         //Draw and erase methods
@@ -108,7 +86,7 @@ namespace WindowsFormsApp2
 
         private void buttonDrawPolygon_Click(object sender, EventArgs e)
         {
-            if (points.Count < 2) return;
+            if (points.Count <= 2) return;
             var polygonDrawer = new PolygonDrawer(points);
             polygonDrawers.Push(polygonDrawer);
             polygonDrawer.Draw(g);

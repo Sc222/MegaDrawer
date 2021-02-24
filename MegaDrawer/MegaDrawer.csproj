@@ -7,7 +7,7 @@
         <ProjectGuid>{CCB525E1-4E43-4E8E-A8C5-F0B3362401BA}</ProjectGuid>
         <OutputType>WinExe</OutputType>
         <RootNamespace>WindowsFormsApp2</RootNamespace>
-        <AssemblyName>WindowsFormsApp2</AssemblyName>
+        <AssemblyName>MegaDrawer</AssemblyName>
         <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
