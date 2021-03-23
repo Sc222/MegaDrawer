@@ -2,7 +2,7 @@
 
 namespace WindowsFormsApp2
 {
-    public class CircleDrawer : IDrawer
+    public class CircleDrawer : Drawer
     {
         public static readonly Color DefaultColor = Color.Coral;
         public static readonly Color DefaultFillColor = Color.CornflowerBlue;
@@ -18,18 +18,18 @@ namespace WindowsFormsApp2
            Radius = radius;
         }
 
-        public void Draw(Graphics g) => Draw(g,DefaultColor,DefaultFillColor);
+        public override void Draw(Graphics g) => Draw(g,DefaultColor,DefaultFillColor);
 
-        public void Draw(Graphics g, Color color) => Draw(g,color,DefaultFillColor);
+        public override void Draw(Graphics g, Color color) => Draw(g,color,DefaultFillColor);
 
-        public void Draw(Graphics g, Color color, Color fillColor)
+        public override void Draw(Graphics g, Color color, Color fillColor)
         {
             g.FillEllipse(new SolidBrush(fillColor),X,Y,Radius,Radius);
             g.DrawEllipse(new Pen(color, Width),X,Y,Radius,Radius);
         }
 
-        public void Erase(Graphics g) => Erase(g,Color.White);
+        public override void Erase(Graphics g) => Erase(g,Color.White);
 
-        public void Erase(Graphics g, Color color) => Draw(g, color, color);
+        public override void Erase(Graphics g, Color color) => Draw(g, color, color);
     }
 }

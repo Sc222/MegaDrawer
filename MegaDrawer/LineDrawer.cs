@@ -2,7 +2,7 @@
 
 namespace WindowsFormsApp2
 {
-    public class LineDrawer : IDrawer
+    public class LineDrawer : Drawer
     {
         public static readonly Color DefaultColor = Color.Coral;
         public readonly int X1;
@@ -20,14 +20,14 @@ namespace WindowsFormsApp2
            Width = width;
         }
 
-        public void Draw(Graphics g) => Draw(g,DefaultColor);
+        public override void Draw(Graphics g) => Draw(g,DefaultColor);
 
-        public void Draw(Graphics g, Color color) => g.DrawLine(new Pen(color, Width),X1,Y1,X2,Y2);
+        public override void Draw(Graphics g, Color color) => g.DrawLine(new Pen(color, Width),X1,Y1,X2,Y2);
 
-        public void Draw(Graphics g, Color color, Color fillColor) => Draw(g, color);
+        public override void Draw(Graphics g, Color color, Color fillColor) => Draw(g, color);
 
-        public void Erase(Graphics g) => Erase(g,Color.White);
+        public override void Erase(Graphics g) => Erase(g,Color.White);
 
-        public void Erase(Graphics g, Color color) => Draw(g,color);
+        public override void Erase(Graphics g, Color color) => Draw(g,color);
     }
 }
