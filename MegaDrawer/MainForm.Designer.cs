@@ -575,7 +575,7 @@
             this.Controls.Add(this.panelDraw);
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "FormMain";
-            this.Load += new System.EventHandler(this.FormMain_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);

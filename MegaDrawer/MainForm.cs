@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp2
@@ -40,15 +39,10 @@ namespace WindowsFormsApp2
         
         public FormMain() => InitializeComponent();
 
-        private void FormMain_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            AllocConsole();
             g = panelDrawCanvas.CreateGraphics();
         }
-        
-        [DllImport("kernel32.dll", SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool AllocConsole();
         
         private void UpdateLastObjectDrawers(Dictionary<Type,Drawer>lastDrawersTemp)
         {
