@@ -43,7 +43,6 @@
             this.buttonEraseLine = new System.Windows.Forms.Button();
             this.buttonDrawLine = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panelDrawCanvas = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -79,11 +78,13 @@
             this.labelRegularPolygonX = new System.Windows.Forms.Label();
             this.buttonEraseRegularPolygon = new System.Windows.Forms.Button();
             this.buttonDrawRegularPolygon = new System.Windows.Forms.Button();
+            this.panelDraw = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBoxRegularPolygon.SuspendLayout();
+            this.panelDraw.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -101,7 +102,7 @@
             this.groupBox1.Controls.Add(this.buttonEraseLine);
             this.groupBox1.Controls.Add(this.buttonDrawLine);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(14, 12);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(223, 261);
             this.groupBox1.TabIndex = 0;
@@ -216,19 +217,10 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(14, 575);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1112, 49);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.panelDrawCanvas);
-            this.groupBox4.Location = new System.Drawing.Point(702, 12);
+            this.groupBox4.Location = new System.Drawing.Point(682, 3);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(424, 358);
             this.groupBox4.TabIndex = 2;
@@ -254,7 +246,7 @@
             this.groupBox5.Controls.Add(this.buttonEraseCircle);
             this.groupBox5.Controls.Add(this.buttonDrawCircle);
             this.groupBox5.Controls.Add(this.groupBox6);
-            this.groupBox5.Location = new System.Drawing.Point(247, 12);
+            this.groupBox5.Location = new System.Drawing.Point(232, 3);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(217, 261);
             this.groupBox5.TabIndex = 18;
@@ -350,7 +342,7 @@
             this.groupBox7.Controls.Add(this.buttonErasePolygon);
             this.groupBox7.Controls.Add(this.buttonDrawPolygon);
             this.groupBox7.Controls.Add(this.groupBox8);
-            this.groupBox7.Location = new System.Drawing.Point(14, 279);
+            this.groupBox7.Location = new System.Drawing.Point(3, 270);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(483, 290);
             this.groupBox7.TabIndex = 19;
@@ -471,7 +463,7 @@
             this.groupBoxRegularPolygon.Controls.Add(this.labelRegularPolygonX);
             this.groupBoxRegularPolygon.Controls.Add(this.buttonEraseRegularPolygon);
             this.groupBoxRegularPolygon.Controls.Add(this.buttonDrawRegularPolygon);
-            this.groupBoxRegularPolygon.Location = new System.Drawing.Point(470, 12);
+            this.groupBoxRegularPolygon.Location = new System.Drawing.Point(455, 3);
             this.groupBoxRegularPolygon.Name = "groupBoxRegularPolygon";
             this.groupBoxRegularPolygon.Size = new System.Drawing.Size(221, 261);
             this.groupBoxRegularPolygon.TabIndex = 20;
@@ -562,18 +554,25 @@
             this.buttonDrawRegularPolygon.UseVisualStyleBackColor = true;
             this.buttonDrawRegularPolygon.Click += new System.EventHandler(this.buttonDrawRegularPolygon_Click);
             // 
+            // panelDraw
+            // 
+            this.panelDraw.Controls.Add(this.groupBox1);
+            this.panelDraw.Controls.Add(this.groupBox5);
+            this.panelDraw.Controls.Add(this.groupBox7);
+            this.panelDraw.Controls.Add(this.groupBoxRegularPolygon);
+            this.panelDraw.Controls.Add(this.groupBox4);
+            this.panelDraw.Location = new System.Drawing.Point(12, 12);
+            this.panelDraw.Name = "panelDraw";
+            this.panelDraw.Size = new System.Drawing.Size(1114, 572);
+            this.panelDraw.TabIndex = 18;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1138, 636);
-            this.Controls.Add(this.groupBoxRegularPolygon);
-            this.Controls.Add(this.groupBox7);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1138, 602);
+            this.Controls.Add(this.panelDraw);
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "FormMain";
             this.Load += new System.EventHandler(this.FormMain_Load);
@@ -586,8 +585,11 @@
             this.groupBox7.PerformLayout();
             this.groupBoxRegularPolygon.ResumeLayout(false);
             this.groupBoxRegularPolygon.PerformLayout();
+            this.panelDraw.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Panel panelDraw;
 
         private System.Windows.Forms.Button buttonDrawRegularPolygon;
         private System.Windows.Forms.Button buttonEraseRegularPolygon;
@@ -648,8 +650,6 @@
         private System.Windows.Forms.Button buttonDrawLine;
 
         private System.Windows.Forms.GroupBox groupBox4;
-
-        private System.Windows.Forms.GroupBox groupBox3;
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
