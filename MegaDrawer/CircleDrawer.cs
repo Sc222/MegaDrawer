@@ -30,6 +30,6 @@ namespace WindowsFormsApp2
 
         public void Erase(Graphics g) => Erase(g,Color.White);
 
-        public void Erase(Graphics g, Color color) => g.FillEllipse(new SolidBrush(color),X-Width,Y-Width,Radius+Width*2,Radius+Width*2);
+        public void Erase(Graphics g, Color color) => Draw(g, color, color);
     }
 }

@@ -28,15 +28,8 @@ namespace WindowsFormsApp2
             g.DrawPolygon(new Pen(color, Width),points.ToArray());
         }
 
-        public void Erase(Graphics g)
-        {
-            Erase(g, Color.White);
-        }
+        public void Erase(Graphics g) => Erase(g, Color.White);
 
-        public void Erase(Graphics g, Color color)
-        {
-            g.FillPolygon(new SolidBrush(color),points.ToArray());
-            g.DrawPolygon(new Pen(color, Width),points.ToArray());
-        }
+        public void Erase(Graphics g, Color color) => Draw(g, color, color);
     }
 }

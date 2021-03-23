@@ -28,6 +28,6 @@ namespace WindowsFormsApp2
 
         public void Erase(Graphics g) => Erase(g,Color.White);
 
-        public void Erase(Graphics g, Color color) => g.DrawLine(new Pen(color, Width), X1, Y1, X2, Y2);
+        public void Erase(Graphics g, Color color) => Draw(g,color);
     }
 }
