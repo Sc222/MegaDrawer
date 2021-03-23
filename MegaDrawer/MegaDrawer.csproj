@@ -12,6 +12,7 @@
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
         <Deterministic>true</Deterministic>
+        <LangVersion>8</LangVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,7 +54,7 @@
         <Compile Include="FormMain.Designer.cs">
             <DependentUpon>FormMain.cs</DependentUpon>
         </Compile>
-        <Compile Include="IDrawer.cs" />
+        <Compile Include="Drawer.cs" />
         <Compile Include="LineDrawer.cs" />
         <Compile Include="PolygonDrawer.cs" />
         <Compile Include="Program.cs" />

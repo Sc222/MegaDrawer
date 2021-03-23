@@ -4,11 +4,10 @@ using System.Drawing;
 
 namespace WindowsFormsApp2
 {
-    public class RegularPolygonDrawer : IDrawer
+    public class RegularPolygonDrawer : Drawer
     {
         public static readonly Color DefaultColor = Color.Coral;
         public static readonly Color DefaultFillColor = Color.CornflowerBlue;
-        public const int Width = 5;
         public readonly int X;
         public readonly int Y;
         public readonly int Radius;
@@ -36,14 +35,14 @@ namespace WindowsFormsApp2
             return points;
         }
 
-        public void Draw(Graphics g) => Draw(g,DefaultColor,DefaultFillColor);
+        public override void Draw(Graphics g) => Draw(g,DefaultColor,DefaultFillColor);
 
-        public void Draw(Graphics g, Color color) => Draw(g,color,DefaultFillColor);
+        public override void Draw(Graphics g, Color color) => Draw(g,color,DefaultFillColor);
 
-        public void Draw(Graphics g, Color color, Color fillColor) => polygonDrawer.Draw(g,color,fillColor);
+        public override void Draw(Graphics g, Color color, Color fillColor) => polygonDrawer.Draw(g,color,fillColor);
 
-        public void Erase(Graphics g) => Erase(g,Color.White);
+        public override void Erase(Graphics g) => Erase(g,Color.White);
 
-        public void Erase(Graphics g, Color color) => polygonDrawer.Erase(g,color);
+        public override void Erase(Graphics g, Color color) => polygonDrawer.Erase(g,color);
     }
 }
