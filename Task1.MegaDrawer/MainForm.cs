@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp2
@@ -42,6 +43,9 @@ namespace WindowsFormsApp2
         private void MainForm_Load(object sender, EventArgs e)
         {
             g = panelDrawCanvas.CreateGraphics();
+            g.SmoothingMode = SmoothingMode.HighQuality;
+            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            DoubleBuffered = true;
         }
         
         private void UpdateLastObjectDrawers(Dictionary<Type,Drawer>lastDrawersTemp)
