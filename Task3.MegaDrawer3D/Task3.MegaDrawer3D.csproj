@@ -4,15 +4,14 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{CCB525E1-4E43-4E8E-A8C5-F0B3362401BA}</ProjectGuid>
+        <ProjectGuid>{5082CD0C-C9D4-4F39-9415-75EE43A7157B}</ProjectGuid>
         <OutputType>WinExe</OutputType>
-        <RootNamespace>WindowsFormsApp2</RootNamespace>
-        <AssemblyName>Task1.MegaDrawer</AssemblyName>
+        <RootNamespace>app</RootNamespace>
+        <AssemblyName>Task3.MegaDrawer3D</AssemblyName>
         <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
         <Deterministic>true</Deterministic>
-        <LangVersion>8</LangVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,19 +46,17 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="core\CircleDrawer.cs" />
-        <Compile Include="core\Drawer.cs" />
-        <Compile Include="core\LineDrawer.cs" />
-        <Compile Include="core\PolygonDrawer.cs" />
-        <Compile Include="core\RegularPolygonDrawer.cs" />
         <Compile Include="MainForm.cs">
-            <SubType>Form</SubType>
+          <SubType>Form</SubType>
         </Compile>
         <Compile Include="MainForm.Designer.cs">
-            <DependentUpon>MainForm.cs</DependentUpon>
+          <DependentUpon>MainForm.cs</DependentUpon>
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <EmbeddedResource Include="MainForm.resx">
+          <DependentUpon>MainForm.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
