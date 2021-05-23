@@ -45,7 +45,7 @@ namespace MegaAnimator.Properties
                 if ((resourceMan == null))
                 {
                     global::System.Resources.ResourceManager temp =
-                        new global::System.Resources.ResourceManager("MegaAnimator.Properties.Resources",
+                        new global::System.Resources.ResourceManager("Task2.MegaAnimator.Properties.Resources",
                             typeof(Resources).Assembly);
                     resourceMan = temp;
                 }

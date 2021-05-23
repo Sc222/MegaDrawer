@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MegaDrawer")]
+[assembly: AssemblyTitle("Task2.MegaAnimator")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MegaDrawer")]
+[assembly: AssemblyProduct("Task2.MegaAnimator")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("CCB525E1-4E43-4E8E-A8C5-F0B3362401BA")]
+[assembly: Guid("6D23D42C-E527-4FEE-8C3E-C37C7119C366")]
 
 // Version information for an assembly consists of the following four values:
 //

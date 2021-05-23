@@ -45,7 +45,7 @@ namespace WindowsFormsApp2.Properties
                 if ((resourceMan == null))
                 {
                     global::System.Resources.ResourceManager temp =
-                        new global::System.Resources.ResourceManager("MegaDrawer.Properties.Resources",
+                        new global::System.Resources.ResourceManager("Task1.MegaDrawer.Properties.Resources",
                             typeof(Resources).Assembly);
                     resourceMan = temp;
                 }

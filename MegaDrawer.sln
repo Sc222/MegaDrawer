@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaDrawer", "MegaDrawer\MegaDrawer.csproj", "{CCB525E1-4E43-4E8E-A8C5-F0B3362401BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1.MegaDrawer", "Task1.MegaDrawer\Task1.MegaDrawer.csproj", "{CCB525E1-4E43-4E8E-A8C5-F0B3362401BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaAnimator", "MegaAnimator\MegaAnimator.csproj", "{6D23D42C-E527-4FEE-8C3E-C37C7119C366}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2.MegaAnimator", "Task2.MegaAnimator\Task2.MegaAnimator.csproj", "{6D23D42C-E527-4FEE-8C3E-C37C7119C366}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
