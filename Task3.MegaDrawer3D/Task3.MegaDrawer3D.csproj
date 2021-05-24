@@ -46,6 +46,9 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="core\SphereDrawer.cs" />
+        <Compile Include="core\SpiralDrawer.cs" />
+        <Compile Include="core\Drawer.cs" />
         <Compile Include="MainForm.cs">
           <SubType>Form</SubType>
         </Compile>
