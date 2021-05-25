@@ -7,11 +7,11 @@ namespace app.core
     {
         public static readonly Color DefaultColor = Color.Coral;
         public const int Width = 2;
-        public readonly int X;
-        public readonly int Y;
+        public readonly double X;
+        public readonly double Y;
         public readonly int LoopsCount;
-        public readonly int TurnWidth;
-        public readonly int TurnHeight;
+        public readonly double TurnWidth;
+        public readonly double TurnHeight;
         public readonly int PenWidth;
 
         public SpiralDrawer(int x, int y, int loopsCount, int turnWidth, int turnHeight, int penWidth = Width)
@@ -26,30 +26,26 @@ namespace app.core
 
         public override void Draw(Graphics g) => Draw(g, DefaultColor);
 
-        // TODO refactor code, make clear variable names
-        // TODO make x,y real spiral top left coordinates
+        // TODO refactor code, make clear variable names, extract hardcoded values
+        // TODO make x,y real object top left coordinates
         public override void Draw(Graphics g, Color color)
         {
             var pen = new Pen(color, PenWidth);
             const double rd = 0.3535534d;
-            double x, y, t, a, b, z1, z2, z3;
-            var px0 = X * 1f + TurnWidth;
-            var py0 = Y * 1f;
-            for (var i = 0; i <= LoopsCount; i++)
+            var startPoint = new PointF((float) (X * 1f + TurnWidth), (float) (Y * 1f));
+            for (var i = 0; i < LoopsCount; i++)
             {
-                t = i * Math.PI / 180.0;
-                a = 0.3 * t;
-                b = 10 * t;
-                z1 = a;
-                z2 = Math.Cos(b);
-                z3 = Math.Sin(b);
-                x = z2 - rd * z3;
-                y = z1 - rd * z3;
-                var px = (float) (X + TurnWidth * x);
-                var py = (float) (Y + TurnHeight * y);
-                g.DrawLine(pen, px0, py0, px, py);
-                px0 = px;
-                py0 = py;
+                var t = i * Math.PI / 180.0;
+                var a = 0.3 * t;
+                var b = 10 * t;
+                var z1 = a;
+                var z2 = Math.Cos(b);
+                var z3 = Math.Sin(b);
+                var x = z2 - rd * z3;
+                var y = z1 - rd * z3;
+                var endPoint = new PointF((float) (X + TurnWidth * x), (float) (Y + TurnHeight * y));
+                g.DrawLine(pen, startPoint, endPoint);
+                startPoint = endPoint;
             }
         }
 
@@ -57,11 +53,11 @@ namespace app.core
 
         public override void Erase(Graphics g) => Erase(g, Color.White);
 
-        // default Draw doesn't delete everything, so we call draw with bigger width and call it multiple times
+        // default Draw doesn't delete everything
         public override void Erase(Graphics g, Color color)
         {
-            var spiralDrawer = new SpiralDrawer(X, Y, LoopsCount, TurnWidth, TurnHeight, PenWidth * 2);
-            for (var i = 0; i < PenWidth / 2; i++) spiralDrawer.Draw(g, color, color);
+            //TODO: erase using spiral drawer with different size
+            g.Clear(color);
         }
     }
 }
