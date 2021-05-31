@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2.MegaAnimator", "Task2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3.MegaDrawer3D", "Task3.MegaDrawer3D\Task3.MegaDrawer3D.csproj", "{5082CD0C-C9D4-4F39-9415-75EE43A7157B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task4.MegaFractal", "Task4.MegaFractal\Task4.MegaFractal.csproj", "{1B4B60B2-216D-4B57-BAAD-485E1BF6D369}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{5082CD0C-C9D4-4F39-9415-75EE43A7157B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5082CD0C-C9D4-4F39-9415-75EE43A7157B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5082CD0C-C9D4-4F39-9415-75EE43A7157B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B4B60B2-216D-4B57-BAAD-485E1BF6D369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B4B60B2-216D-4B57-BAAD-485E1BF6D369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B4B60B2-216D-4B57-BAAD-485E1BF6D369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B4B60B2-216D-4B57-BAAD-485E1BF6D369}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
