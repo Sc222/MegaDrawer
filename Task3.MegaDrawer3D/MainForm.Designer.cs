@@ -33,6 +33,9 @@
             this.panelDrawCanvas = new System.Windows.Forms.Panel();
             this.panelDraw = new System.Windows.Forms.Panel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -59,11 +62,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.panelDrawCanvas);
-            this.groupBox4.Location = new System.Drawing.Point(186, 2);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Location = new System.Drawing.Point(279, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(308, 216);
+            this.groupBox4.Size = new System.Drawing.Size(462, 332);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Вывод";
@@ -71,10 +72,9 @@
             // panelDrawCanvas
             // 
             this.panelDrawCanvas.BackColor = System.Drawing.Color.White;
-            this.panelDrawCanvas.Location = new System.Drawing.Point(4, 16);
-            this.panelDrawCanvas.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDrawCanvas.Location = new System.Drawing.Point(6, 25);
             this.panelDrawCanvas.Name = "panelDrawCanvas";
-            this.panelDrawCanvas.Size = new System.Drawing.Size(300, 190);
+            this.panelDrawCanvas.Size = new System.Drawing.Size(450, 292);
             this.panelDrawCanvas.TabIndex = 0;
             // 
             // panelDraw
@@ -84,34 +84,69 @@
             this.panelDraw.Controls.Add(this.groupBox3);
             this.panelDraw.Controls.Add(this.groupBox1);
             this.panelDraw.Controls.Add(this.groupBox4);
-            this.panelDraw.Location = new System.Drawing.Point(8, 12);
-            this.panelDraw.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDraw.Location = new System.Drawing.Point(12, 18);
             this.panelDraw.Name = "panelDraw";
-            this.panelDraw.Size = new System.Drawing.Size(498, 431);
+            this.panelDraw.Size = new System.Drawing.Size(747, 663);
             this.panelDraw.TabIndex = 18;
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.button8);
+            this.groupBox8.Controls.Add(this.button7);
+            this.groupBox8.Controls.Add(this.button6);
             this.groupBox8.Controls.Add(this.button4);
             this.groupBox8.Controls.Add(this.button5);
             this.groupBox8.Controls.Add(this.groupBox9);
-            this.groupBox8.Location = new System.Drawing.Point(3, 164);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox8.Location = new System.Drawing.Point(4, 252);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox8.Size = new System.Drawing.Size(179, 50);
+            this.groupBox8.Size = new System.Drawing.Size(268, 190);
             this.groupBox8.TabIndex = 5;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Куб";
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button8.ForeColor = System.Drawing.Color.Cornsilk;
+            this.button8.Location = new System.Drawing.Point(146, 81);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(111, 38);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "движение";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.buttonMoveCube_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button7.ForeColor = System.Drawing.Color.Cornsilk;
+            this.button7.Location = new System.Drawing.Point(146, 26);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(111, 38);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "масштаб";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.buttonScaleCube_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button6.ForeColor = System.Drawing.Color.Cornsilk;
+            this.button6.Location = new System.Drawing.Point(16, 81);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(111, 38);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "вращать";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.buttonRotateCube_Click);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.PaleVioletRed;
             this.button4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button4.Location = new System.Drawing.Point(97, 17);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(16, 134);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(74, 25);
+            this.button4.Size = new System.Drawing.Size(241, 38);
             this.button4.TabIndex = 5;
             this.button4.Text = "стереть";
             this.button4.UseVisualStyleBackColor = false;
@@ -121,10 +156,9 @@
             // 
             this.button5.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button5.Location = new System.Drawing.Point(10, 17);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Location = new System.Drawing.Point(15, 26);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(74, 25);
+            this.button5.Size = new System.Drawing.Size(111, 38);
             this.button5.TabIndex = 3;
             this.button5.Text = "нарисовать";
             this.button5.UseVisualStyleBackColor = false;
@@ -132,11 +166,9 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Location = new System.Drawing.Point(0, 243);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Location = new System.Drawing.Point(0, 374);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox9.Size = new System.Drawing.Size(516, 42);
+            this.groupBox9.Size = new System.Drawing.Size(774, 65);
             this.groupBox9.TabIndex = 1;
             this.groupBox9.TabStop = false;
             // 
@@ -145,11 +177,9 @@
             this.groupBox6.Controls.Add(this.button3);
             this.groupBox6.Controls.Add(this.buttonDrawSurface);
             this.groupBox6.Controls.Add(this.groupBox7);
-            this.groupBox6.Location = new System.Drawing.Point(3, 110);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox6.Location = new System.Drawing.Point(4, 169);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox6.Size = new System.Drawing.Size(179, 50);
+            this.groupBox6.Size = new System.Drawing.Size(268, 77);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Поверхность";
@@ -158,10 +188,9 @@
             // 
             this.button3.BackColor = System.Drawing.Color.PaleVioletRed;
             this.button3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button3.Location = new System.Drawing.Point(97, 17);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(146, 26);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 25);
+            this.button3.Size = new System.Drawing.Size(111, 38);
             this.button3.TabIndex = 5;
             this.button3.Text = "стереть";
             this.button3.UseVisualStyleBackColor = false;
@@ -171,10 +200,9 @@
             // 
             this.buttonDrawSurface.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttonDrawSurface.ForeColor = System.Drawing.Color.Cornsilk;
-            this.buttonDrawSurface.Location = new System.Drawing.Point(11, 17);
-            this.buttonDrawSurface.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonDrawSurface.Location = new System.Drawing.Point(16, 26);
             this.buttonDrawSurface.Name = "buttonDrawSurface";
-            this.buttonDrawSurface.Size = new System.Drawing.Size(74, 25);
+            this.buttonDrawSurface.Size = new System.Drawing.Size(111, 38);
             this.buttonDrawSurface.TabIndex = 3;
             this.buttonDrawSurface.Text = "нарисовать";
             this.buttonDrawSurface.UseVisualStyleBackColor = false;
@@ -182,11 +210,9 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Location = new System.Drawing.Point(0, 243);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox7.Location = new System.Drawing.Point(0, 374);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox7.Size = new System.Drawing.Size(516, 42);
+            this.groupBox7.Size = new System.Drawing.Size(774, 65);
             this.groupBox7.TabIndex = 1;
             this.groupBox7.TabStop = false;
             // 
@@ -195,11 +221,9 @@
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.buttonDrawSphere);
             this.groupBox3.Controls.Add(this.groupBox5);
-            this.groupBox3.Location = new System.Drawing.Point(3, 56);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(4, 86);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(179, 50);
+            this.groupBox3.Size = new System.Drawing.Size(268, 77);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Сфера";
@@ -208,10 +232,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.PaleVioletRed;
             this.button2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button2.Location = new System.Drawing.Point(97, 17);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(146, 26);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 25);
+            this.button2.Size = new System.Drawing.Size(111, 38);
             this.button2.TabIndex = 5;
             this.button2.Text = "стереть";
             this.button2.UseVisualStyleBackColor = false;
@@ -221,10 +244,9 @@
             // 
             this.buttonDrawSphere.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttonDrawSphere.ForeColor = System.Drawing.Color.Cornsilk;
-            this.buttonDrawSphere.Location = new System.Drawing.Point(10, 17);
-            this.buttonDrawSphere.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonDrawSphere.Location = new System.Drawing.Point(15, 26);
             this.buttonDrawSphere.Name = "buttonDrawSphere";
-            this.buttonDrawSphere.Size = new System.Drawing.Size(74, 25);
+            this.buttonDrawSphere.Size = new System.Drawing.Size(111, 38);
             this.buttonDrawSphere.TabIndex = 3;
             this.buttonDrawSphere.Text = "нарисовать";
             this.buttonDrawSphere.UseVisualStyleBackColor = false;
@@ -232,11 +254,9 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Location = new System.Drawing.Point(0, 243);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Location = new System.Drawing.Point(0, 374);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox5.Size = new System.Drawing.Size(516, 42);
+            this.groupBox5.Size = new System.Drawing.Size(774, 65);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             // 
@@ -245,11 +265,9 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.buttonDrawSpiral);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(3, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(4, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(179, 50);
+            this.groupBox1.Size = new System.Drawing.Size(268, 77);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Спираль";
@@ -258,10 +276,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.PaleVioletRed;
             this.button1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button1.Location = new System.Drawing.Point(97, 17);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(146, 26);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 25);
+            this.button1.Size = new System.Drawing.Size(111, 38);
             this.button1.TabIndex = 4;
             this.button1.Text = "стереть";
             this.button1.UseVisualStyleBackColor = false;
@@ -271,10 +288,9 @@
             // 
             this.buttonDrawSpiral.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttonDrawSpiral.ForeColor = System.Drawing.Color.Cornsilk;
-            this.buttonDrawSpiral.Location = new System.Drawing.Point(11, 17);
-            this.buttonDrawSpiral.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonDrawSpiral.Location = new System.Drawing.Point(16, 26);
             this.buttonDrawSpiral.Name = "buttonDrawSpiral";
-            this.buttonDrawSpiral.Size = new System.Drawing.Size(74, 25);
+            this.buttonDrawSpiral.Size = new System.Drawing.Size(111, 38);
             this.buttonDrawSpiral.TabIndex = 3;
             this.buttonDrawSpiral.Text = "нарисовать";
             this.buttonDrawSpiral.UseVisualStyleBackColor = false;
@@ -282,23 +298,20 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(0, 243);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(0, 374);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(516, 42);
+            this.groupBox2.Size = new System.Drawing.Size(774, 65);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(513, 454);
+            this.ClientSize = new System.Drawing.Size(770, 698);
             this.Controls.Add(this.panelDraw);
             this.Location = new System.Drawing.Point(15, 15);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.groupBox4.ResumeLayout(false);
@@ -309,6 +322,11 @@
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button button8;
+
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
 
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Button button5;

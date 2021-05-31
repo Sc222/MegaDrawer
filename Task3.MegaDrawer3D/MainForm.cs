@@ -10,16 +10,7 @@ namespace MegaAnimator
     public partial class MainForm : Form
     {
         private Graphics g;
-
-        private Timer timer = new Timer();
-
-        private int ticks = 0;
-        // private Timer timerScaleDown = new Timer();
-
-        private const int Interval = 1;
-
         private SpiralDrawer spiralDrawer = new SpiralDrawer(150, 50, 500, 50, 40);
-
         private SphereDrawer sphereDrawer = new SphereDrawer(150, 100, 750, 75);
 
         private SurfaceDrawer surfaceDrawer = new SurfaceDrawer(150, 100,
@@ -28,9 +19,10 @@ namespace MegaAnimator
             100,
             60
         );
-        
-        private CubeDrawer cubeDrawer = new CubeDrawer(115, 60, 100);
 
+        private CubeDrawer cubeDrawer = new CubeDrawer(115, 60, 100);
+        private CubeAnimationsWrapper cubeAnimationsWrapper = new CubeAnimationsWrapper();
+        
         public MainForm() => InitializeComponent();
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -45,7 +37,7 @@ namespace MegaAnimator
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool AllocConsole();
-
+        
         private void buttonDrawSpiral_Click(object sender, EventArgs e)
         {
             spiralDrawer.Draw(g);
@@ -70,7 +62,7 @@ namespace MegaAnimator
         {
             surfaceDrawer.Draw(g);
         }
-        
+
         private void buttonEraseSurface_Click(object sender, EventArgs e)
         {
             surfaceDrawer.Erase(g);
@@ -84,6 +76,21 @@ namespace MegaAnimator
         private void buttonEraseCube_Click(object sender, EventArgs e)
         {
             cubeDrawer.Erase(g);
+        }
+
+        private void buttonScaleCube_Click(object sender, EventArgs e)
+        {
+            cubeAnimationsWrapper.AnimateCubeScaling(g);
+        }
+        
+        private void buttonMoveCube_Click(object sender, EventArgs e)
+        {
+            cubeAnimationsWrapper.AnimateCubeTranslation(g);
+        }
+        
+        private void buttonRotateCube_Click(object sender, EventArgs e)
+        {
+            cubeAnimationsWrapper.AnimateCubeRotation(g);
         }
     }
 }
