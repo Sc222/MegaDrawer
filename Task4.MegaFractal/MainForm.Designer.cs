@@ -87,7 +87,6 @@
             this.Controls.Add(this.Label1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
-            this.Text = "howto_snowflake_fractal";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize) (this.picCanvas)).EndInit();
             this.ResumeLayout(false);
